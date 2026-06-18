@@ -307,6 +307,66 @@ ul { list-style: none; }
 }
 @media (max-width: 768px) { .step-line { display: none; } }
 
+/* === OFFRES === */
+.offres { padding: 100px 0; }
+.offres-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+@media (max-width: 900px) { .offres-grid { grid-template-columns: 1fr; } }
+
+.offre-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 40px 32px;
+  position: relative;
+  transition: border-color .3s, transform .3s;
+  display: flex;
+  flex-direction: column;
+}
+.offre-card:hover { border-color: rgba(124,58,237,.4); transform: translateY(-4px); }
+
+.offre-highlight {
+  background: linear-gradient(145deg, rgba(124,58,237,.12), rgba(6,182,212,.06));
+  border-color: rgba(124,58,237,.35);
+}
+.offre-badge {
+  position: absolute;
+  top: 20px; right: 20px;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+.offre-icon { font-size: 2rem; margin-bottom: 16px; }
+.offre-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; }
+.offre-prix {
+  font-size: 2.4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 6px;
+  line-height: 1;
+}
+.offre-prix span { font-size: 1.4rem; }
+.offre-duree {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.offre-card .card-list { flex: 1; }
+.offre-btn { margin-top: 32px; align-self: flex-start; }
+
 /* === CTA BAND === */
 .cta-band {
   padding: 100px 0;
